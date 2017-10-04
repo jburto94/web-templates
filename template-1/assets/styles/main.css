@@ -29,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
+  font-family: Arial;
 }
 ol, ul {
   list-style: none;
@@ -53,19 +54,57 @@ Header
 */
 
 header {
-  background: linear-gradient(to bottom, #00008b 0%, #02058e 3%, #499bea 100%);
+  height: 400px;
 }
 
-.logo {
-  font-size: 42px;
-  color: #e6e6e6;
-  font-family: 'Lobster', cursive
+.background {
+  background: url("../images/background.jpg") no-repeat center center fixed;
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  z-index: -1;
 }
 
-.slogan {
-  font-size: 22px;
-  color: #e6e6e6;
+.header {
+  margin: auto;
+  width: 45%;
+  padding: 120px;
+  text-align: center;
+
+}
+
+h1 {
+  font-size: 54px;
+  color: white;
+  display: inline;
+  padding: 0px 10px;
   text-transform: uppercase;
-  font-style: italic;
-  font-family: Times;
+}
+
+.header p {
+  font-size: 20px;
+  color: white;
+  padding-top: 40px;
+  line-height: 30px;
+}
+
+/*
+======================================
+Services
+======================================
+*/
+
+.services {
+  padding: 50px 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #f0353d;
+  font-size: 28px;
+  text-transform: uppercase;
 }
