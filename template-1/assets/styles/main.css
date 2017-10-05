@@ -145,22 +145,25 @@ Services
 
 h2 {
   text-align: center;
-  color: #f0353d;
   font-size: 32px;
   text-transform: uppercase;
   padding-bottom: 40px;
 }
 
+h2 span {
+  color: #E61414;
+}
+
 h4 {
   text-align: left;
   font-size: 26px;
-  line-height: 32px;
+  line-height: 40px;
   color: #606060;
 }
 
 p {
   font-size: 18px;
-  line-height: 24px;
+  line-height: 28px;
   color: #606060
 }
 
@@ -183,9 +186,10 @@ Mini Section
   font-size: 16px;
 }
 
-h3 {
+.mini h3 {
   color: white;
   font-size: 32px;
+  line-height: 50px;
 }
 
 /*
@@ -211,7 +215,7 @@ Portfolio
 }
 .imgs a {
   text-decoration: none;
-  border: 1px solid #f0353d;
+  border: 1px solid #E61414;
   border-radius: 8px;
   padding: 5px;
   color: white
@@ -228,35 +232,37 @@ Pricing
 */
 
 .pricing {
-  background: #d1d1d1;
+  background: #E7E7E7;
   padding-bottom: 330px;
 }
 
 .pricing h3 {
   float: left;
   color: red;
-  font-size: 54px;
+  font-size: 60px;
+  margin-bottom: 70px;
+}
+
+.col-1-2 {
+  display: inline-block;
+  border-radius: 5px;
+  margin-right: 25px;
 }
 
 #col-1 {
   float: left;
-  display: inline-block;
-  border-radius: 5px;
 }
 
 #col-1 h3 {
-  padding-left: 25px;
+  padding-left: 20px;
 }
 
 #col-2 {
   float: right;
-  display: inline-block;
-  border-radius: 5px;
 }
 
 .col-1-2 h4 {
-  padding-top: 20px;
-  padding-bottom: 5px;
+  padding: 15px 0 5px 0;
 }
 
 .col-1-2 p {
@@ -277,7 +283,7 @@ Pricing
   color: white;
   font-size: 20px;
   text-decoration: none;
-  border: 1px solid #f0353d;
+  border: 2px solid #E61414;
   border-radius: 8px;
 }
 
@@ -302,22 +308,20 @@ h5 {
   text-transform: uppercase;
   font-size: 28px;
   color: white;
-  line-height: 75px;
+  line-height: 80px;
 }
 
 footer p {
   color: white;
   font-size: 20px;
-  line-height: 24px;
-  padding-bottom: 25px;
+  line-height: 28px;
+  padding-bottom: 35px;
 }
 
 footer img {
   text-align: center;
-  display: block;
-  padding-bottom: 20px;
-  position: relative;
-  left: 60px;
+  display: inline-block;
+  margin: 0 0 20px 60px;
 }
 
 .email {
@@ -330,11 +334,12 @@ footer img {
 }
 
 .submit {
-  color: #f0353d;
+  color: #E61414;
   background: #272727;
   text-align: center;
   width: 100%;
-  border: 1px solid #f0353d;
+  border: 2px solid #E61414;
   border-radius: 5px;
   padding: 8px;
+  font-weight: bold;
 }
