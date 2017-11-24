@@ -593,6 +593,10 @@ a {
   line-height: 44px;
 }
 
+.row-alt a:hover {
+  opacity: 0.7;
+}
+
 /*
   ========================================
   Buttons
