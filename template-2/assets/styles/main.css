@@ -296,6 +296,10 @@ nav a:hover {
   margin-bottom: 5px;
 }
 
+.port:hover .shader {
+  opacity: 0.8;
+}
+
 .port-1 {
   background: url('../images/pf1.jpg') center center no-repeat;
 }
@@ -328,50 +332,6 @@ nav a:hover {
   background: url('../images/pf8.jpg') center center no-repeat;
 }
 
-.port-1 *, .port-2 *, .port-3 *, .port-4 *, 
-.port-5 *, .port-6 *, .port-7 *, .port-8 * {
-  visibility: hidden;
-}
-
-.port-1:hover *, .port-2:hover *,
-.port-3:hover *, .port-4:hover *, 
-.port-5:hover *, .port-6:hover *, 
-.port-7:hover *, .port-8:hover * {
-  visibility: visible;
-}
-
-.port-1:hover {
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/pf1.jpg') center center no-repeat;
-}
-
-.port-2:hover {
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/pf2.jpg') center center no-repeat;
-}
-
-.port-3:hover {
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/pf3.jpg') center center no-repeat;
-}
-
-.port-4:hover {
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/pf4.jpg') center center no-repeat;
-}
-
-.port-5:hover {
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/pf5.jpg') center center no-repeat;
-}
-
-.port-6:hover {
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/pf6.jpg') center center no-repeat;
-}
-
-.port-7:hover {
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/pf7.jpg') center center no-repeat;
-}
-
-.port-8:hover {
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/pf8.jpg') center center no-repeat;
-}
-
 /*
   ========================================
   Team
@@ -398,13 +358,13 @@ nav a:hover {
   text-align: center;
 }
 
-.profile-pic:hover {
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/team1.jpg') center top no-repeat;
-}
-
-.profile-pic div {
+.profile-pic .shader div {
   display: inline-block;
   padding-top: 50%;
+}
+
+.profile-pic:hover .shader {
+  opacity: 0.8;
 }
 
 .profile-pic i {
@@ -419,17 +379,7 @@ nav a:hover {
 
 .profile-pic i:hover {
   background: #414141;
-  opacity: 0.3;
-}
-
-.profile-pic * {
-  visibility: hidden;
-  transition: visbility 1s;
-  transition-timing-function: ease;
-}
-
-.profile-pic:hover * {
-  visibility: visible;
+  opacity: 0.5;
 }
 
 .member {
@@ -657,4 +607,12 @@ a {
   width: 80px;
   background-color: #7B6C63;
   margin: 40px 0;
+}
+
+.shader {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 1s ease;
 }
