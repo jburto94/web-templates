@@ -160,6 +160,7 @@ header {
 
 .logo {
   font-family: 'Lobster', cursive;
+  font-size: 3.5vmax;
 }
 
 nav, nav li, .logo {
@@ -216,7 +217,7 @@ nav a:hover {
 .about-us img {
   float: right;
   margin-left: 40px;
-  width: 600px;
+  width: 43vw;
 }
 
 .skills {
