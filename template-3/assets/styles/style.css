@@ -12,6 +12,68 @@ body {
 	color: white;
 }
 
+.container,
+.container-fluid {
+	height: 100%;
+}
+
+.padding {
+	padding: 10rem 0;
+}
+
+h1, h2 {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-weight: bold;
+	margin: 5rem 0;
+}
+
+p {
+	font-size: 2rem;
+	color: rgba(0,0,0,0.4);
+}
+
+
+/*
+======================
+Buttons
+======================
+*/
+
+.btn {
+	font-size: 1.5em;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	padding: 1.5rem 4rem;
+	margin-top: 3rem;
+	border-radius: 0;
+}
+
+.btn-main {
+	color: #aaa;
+	background: rgba(49, 166, 100, 0.8);
+	transition: all 0.4s linear;
+}
+
+.btn-main:hover {
+	text-decoration: none;
+	background: #fff;
+	color: #31a664;
+}
+
+.btn-alt {
+	background: #white;
+	color: #31a664;
+	border: 3px solid #31a664;
+	transition: all 0.4s linear;
+}
+
+.btn-alt:hover {
+	background: #31a664;
+	color: white;
+}
+
 /*
 ======================
 Nav
@@ -21,6 +83,18 @@ Nav
 nav {
 	line-height: 4.5rem;
 	z-index: 10;
+	position: fixed;
+	top: -100px;
+	transition: all 0.3s linear;
+	background: white;
+	width: 100%;
+	z-index: 400;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.nav-fixed {
+	top: 0;
+	position: fixed;
 }
 
 nav .container {
@@ -51,6 +125,7 @@ nav ul li {
 	padding: 0 1.125rem;
 	font-size: 1.4em;
 	color: rgba(0,0,0,.5);
+	transition: all 0.4s linear;
 }
 
 nav ul li:hover {
@@ -67,24 +142,18 @@ Home
 #home {
 	background: url('../images/background.png') center top no-repeat;
 	background-size: cover;
-	height: 100vh;
+	background-attachment: fixed;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .welcome {
-	padding: 80px;
 	text-align: center;
 }
 
 .welcome h1 {
-	margin-top: 5rem;
-	margin-bottom: 5rem;
 	font-size: 3.6em;
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: 5px;
 }
 
 .welcome h3 {
@@ -93,26 +162,192 @@ Home
 	letter-spacing: 3px;
 }
 
+/*
+================
+About
+================
+*/
 
+#about {
+	color: rgba(0,0,0,0.5);
+}
+
+#about .row {
+	display: flex;
+	align-items: center;
+}
+
+.about-pic {
+	background: url('../images/point.png');
+	background-size: cover;
+	height: 50rem;
+	width: 75%;
+	margin: 0 auto;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.about-pic-info {
+	background: rgba(0,0,0,0.9);
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: all .4s linear;
+}
+
+.about-pic:hover .about-pic-info {
+	transform: scale(0.9);
+	opacity: 1;
+}
+
+
+.about-pic-info a {
+	padding: 1.8rem;
+	border-radius: 50%;
+	margin: 1rem;
+	transition: all 0.4s linear;
+}
+
+.about-pic-info a:hover {
+	background: white;
+	transition: all 0.4s linear;
+}
+
+.about-pic-info i {
+	color: rgba(255,255,255,0.8);
+}
+
+.about-pic-info a:hover i {
+	color: rgba(0,0,0,0.8);
+}
+
+.about-text {
+	width: 70%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+}
+
+.about-text {
+	flex-wrap: wrap;
+}
+
+#about h2 {
+	color: rgba(0,0,0,0.8);
+}
 
 /*
 ======================
-Buttons
+Fitness Facts
 ======================
 */
 
-.btn-main {
-	font-size: 1.5em;
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	color: #aaa;
-	background: rgba(49, 166, 100, 0.8);
-	padding: 1.5rem 4rem;
+#facts {
+	background: #f7f7f7;
 }
 
-.btn-main:hover {
-	text-decoration: none;
-	background: #fff;
-	color: #31a664;
+#facts h2 {
+	color: rgba(0,0,0,0.8);
+	margin-bottom: 8rem;
+	text-align: center;
 }
+
+#facts .container {
+	margin-bottom: 14rem;
+}
+
+#facts img {
+	width: 500px;
+}
+
+.fact-box {
+	color: rgba(0,0,0,0.9);
+	font-size: 2.4rem;
+	font-family: 'Lora', sans-serif;
+	width: 450px;
+	padding: 3rem;
+	border-left: 10px solid rgba(0,0,0,0.8);
+	background: #fff;
+	box-shadow: 8px 8px 8px rgba(0,0,0,0.2);
+	z-index: 100;
+	position: absolute;
+	top: 320px;
+	right: 40px;
+	float: right;
+	margin-top: -20px;
+}
+
+#facts .row {
+	display: flex;
+	align-items: center;
+}
+
+#facts ul {
+	list-style-type: square;
+}
+
+#facts li {
+	font-size: 2.1rem;
+	color: rgba(0,0,0,0.6);
+	margin-bottom: 3rem;
+}
+
+#facts .col-lg-6 {
+	height: 100%;
+}
+
+/*
+=====================
+Message
+=====================
+*/
+
+#message {
+	background: url('../images/background.png') center center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	text-align: center;
+}
+
+.message-filter {
+	background: rgba(49, 166, 100, 0.6);
+}
+
+#message h2 {
+	margin-bottom: 2rem;
+}
+
+#message p {
+	color: rgba(255,255,255,0.6);
+}
+
+#message form {
+	margin: 4rem 0;
+}
+
+#message input {
+	background: transparent;
+	width: 360px;
+	height: 4rem;
+	border: none;
+	border-bottom: 2px solid rgba(255,255,255,0.4);
+	padding: 1rem;
+	margin: 0 2rem;
+	font-size: 2.5rem;
+}
+
+#message input:focus {
+	outline: none;
+	border-bottom: 2px solid white;
+}
+
+#message input::placeholder {
+	color: rgba(255,255,255,0.4);
+}
+
