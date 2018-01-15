@@ -22,7 +22,7 @@ body {
 }
 
 .filter {
-	background: rgba(49, 166, 100, 0.6);
+	background: rgba(0,0,0,0.7);
 	height: 100%;
 	width: 100%;
 }
@@ -44,12 +44,12 @@ h3 {
 	letter-spacing: 3px;
 }
 
-h4 {
+h5 {
 	font-size: 1.4rem;
 	color: rgba(0,0,0,0.6);
 }
 
-h5 {
+h6 {
 	font-size: 1.5rem;
 	color: rgba(0,0,0,0.8);
 }
@@ -81,8 +81,8 @@ Buttons
 }
 
 .btn-main {
-	color: #aaa;
-	background: rgba(49, 166, 100, 0.8);
+	color: #fff;
+	background: #31a664;
 	transition: all 0.4s linear;
 }
 
@@ -196,20 +196,12 @@ About
 	color: rgba(0,0,0,0.5);
 }
 
-#about .row {
-	display: flex;
-	align-items: center;
-}
-
 .about-pic {
 	background: url('../images/point.png');
 	background-size: cover;
 	height: 50rem;
-	width: 75%;
+	width: 80%;
 	margin: 0 auto;
-	display: flex;
-	align-items: flex-start;
-	justify-content: flex-start;
 }
 
 .about-pic-info {
@@ -282,10 +274,6 @@ Fitness Facts
 	text-align: center;
 }
 
-#facts .container {
-	margin-bottom: 14rem;
-}
-
 #facts img {
 	width: 500px;
 }
@@ -300,16 +288,9 @@ Fitness Facts
 	background: #fff;
 	box-shadow: 8px 8px 8px rgba(0,0,0,0.2);
 	z-index: 100;
-	position: absolute;
-	top: 320px;
-	right: 40px;
-	float: right;
-	margin-top: -20px;
-}
-
-#facts .row {
-	display: flex;
-	align-items: center;
+	position: relative;
+	top: -100px;
+	left: 80px;
 }
 
 #facts ul {
@@ -411,12 +392,12 @@ Blog
 }
 
 .blog:hover .blogfilter {
-	background: rgba(0,0,0,0.4);
+	background: rgba(0,0,0,0.5);
 }
 
 .blog:hover h3,
-.blog:hover h4,
-.blog:hover h5 {
+.blog:hover h5,
+.blog:hover h6 {
 	color: white;
 }
 
@@ -427,7 +408,53 @@ Prices
 */
 
 #prices {
-	background: url('../images/background.png') center bottom no-repeat;
+	background: url('../images/background.png') center bottom;
 	text-align: center;
+	color: white;
 }
 
+#prices p {
+	color: white;
+	font-size: 1.8rem;
+	margin: 2rem auto;
+}
+
+.pricing {
+	border: 1px solid white;
+	margin-top: 3rem;
+	padding-bottom: 7rem;
+}
+
+.package {
+	font-family: 'Lora', sans-serif;
+	font-size: 3.6rem;
+	line-height: 4.8rem;
+}
+
+.amount {
+	width: 12rem;
+	height: 12rem;
+	padding-top: 3.8rem;
+	margin-bottom: 5rem;
+	border-radius: 50%;
+	font-size: 3rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	background: #31a664;
+	display: inline-block;
+}
+
+.pricing p {
+	width: 60%;
+	margin: 0 auto;
+	font-weight: bold;
+	line-height: 3rem;
+	text-align: center;
+	height: 20rem;
+}
+
+@media only screen and (max-width: 992px) {
+	.pricing p {
+		height: 15rem;
+	}
+}
