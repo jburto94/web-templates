@@ -115,6 +115,39 @@ Buttons
 }
 
 /*
+=========================
+Slide Ins
+=========================
+*/
+
+.slide {
+	opacity: 0;
+	transition: all 1.5s ease;
+	transform: scale(0.9);
+}
+
+.slide.slide-up {
+	transform: translateY(200px);
+}
+
+.slide.slide-down {
+	transform: translateY(-200px);
+}
+
+.slide.slide-left {
+	transform: translateX(-100%);
+}
+
+.slide.slide-right {
+	transform: translateX(200%);
+}
+
+.slide.visible {
+	opacity: 1;
+	transform: translateY(0%) translateX(0) scale(1);
+}
+
+/*
 ======================
 Nav
 ======================
@@ -549,6 +582,12 @@ Testimonials
 	color: rgba(0,0,0,0.5);
 	font-size: 1.8rem;
 	font-weight: bold;
+}
+
+.quotes.slide.slide-right,
+.citation.slide.slide-right {
+	transform: translateX(200%);
+	transition: transform 0s;
 }
 
 #testimonials span {

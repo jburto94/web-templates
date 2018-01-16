@@ -12,7 +12,7 @@ function navScroll() {
 
 window.addEventListener('scroll', navScroll);
 
-//Navigation collapse
+//Makes Navbar appear when the user clicks the arrow
 var navCollapse = document.querySelector('#nav-collapse');
 
 function navToggle(e) {
@@ -121,7 +121,56 @@ function quoteSetter(e) {
 	//Removes active quote class to unactive quotes
 	quotes.forEach(quote => quote.classList.remove('active-quote'));
 	this.classList.add('active-quote');
+
+
+	//Creates a scrolling effect
+	quote.classList.add('slide', 'slide-left');
+	setTimeout(function() {
+		quote.classList.add('slide-right');
+	}, 1000);
+	setTimeout(function() {
+		quote.classList.add('visible');
+	}, 1100);
+	setTimeout(function() {
+		quote.classList.remove('slide', 'slide-left', 'slide-right', 'visible');
+	}, 1200);
+
+	citation.classList.add('slide', 'slide-left');
+	setTimeout(function() {
+		citation.classList.add('slide-right');
+	}, 1000);
+	setTimeout(function() {
+		citation.classList.add('visible');
+	}, 1100);
+	setTimeout(function() {
+		citation.classList.remove('slide', 'slide-left', 'slide-right', 'visible');
+	}, 1200);
 }
 
 quotes.forEach(quote => quote.addEventListener('click', quoteSetter));
 
+
+//Slide in Animations when the user scrolls in the area
+
+	//Function that keeps the window from checking scroll so much
+function debounce(func, wait) {
+	let timeout;
+	return function() {
+		const context = () => func.apply(this, arguments);
+		clearTimeout(timeout);
+		timeout = setTimeout(context, wait);
+	}
+}
+
+var slideElements = document.querySelectorAll('.slide');
+
+function slide(e) {
+	slideElements.forEach(slideElement => {
+		const slideInLocation = window.scrollY + window.innerHeight;
+		if (slideInLocation > slideElement.offsetTop) {
+			slideElement.classList.add('visible');
+		}
+	});
+}
+
+window.addEventListener('scroll', debounce(slide, 15));
