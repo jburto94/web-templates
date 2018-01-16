@@ -21,6 +21,10 @@ body {
 	padding: 10rem 0;
 }
 
+.padding-top {
+	padding-top: 10rem;
+}
+
 .filter {
 	background: rgba(0,0,0,0.7);
 	height: 100%;
@@ -44,6 +48,13 @@ h3 {
 	letter-spacing: 3px;
 }
 
+h4 {
+	font-size: 2.8rem;
+	font-weight: bold;
+	letter-spacing: 3px;
+	margin: 3rem auto;
+}
+
 h5 {
 	font-size: 1.4rem;
 	color: rgba(0,0,0,0.6);
@@ -64,6 +75,7 @@ a:hover {
 }
 
 
+
 /*
 ======================
 Buttons
@@ -78,22 +90,20 @@ Buttons
 	padding: 1.5rem 4rem;
 	margin-top: 3rem;
 	border-radius: 0;
-}
-
-.btn-main {
 	color: #fff;
 	background: #31a664;
 	transition: all 0.4s linear;
 }
 
-.btn-main:hover {
+
+.btn:hover {
 	text-decoration: none;
 	background: #fff;
 	color: #31a664;
 }
 
 .btn-alt {
-	background: #white;
+	background: white;
 	color: #31a664;
 	border: 3px solid #31a664;
 	transition: all 0.4s linear;
@@ -127,12 +137,6 @@ nav {
 	position: fixed;
 }
 
-nav .container {
-	display: flex;
-	align-items: center;
-	padding: 0;
-}
-
 nav .logo {
 	display: inline-block;
 	max-width: 15%;
@@ -146,8 +150,10 @@ nav .logo {
 nav ul {
 	list-style-type: none;
 	display: inline-block;
-	margin-left: auto;
+	margin-top: 2rem;
 	margin-bottom: 0;
+	float: right;
+	clear: both;
 }
 
 nav ul li {
@@ -162,6 +168,36 @@ nav ul li:hover {
 	text-decoration: none;
 	color: black;
 }
+
+#nav-collapse {
+	color: grey;
+	margin-top: 1rem;
+	cursor: pointer;
+	display: none;
+	float: right;
+}
+
+.showNav {
+	display: block;
+	width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+	nav ul {
+		display: none;
+		float: none;
+		clear: both;
+	}
+	.navigation li {
+		display: block;
+		width: 100%;
+		transition: all 0.5s ease;
+	}
+	#nav-collapse {
+		display: inline-block;
+	}
+}
+
 
 /*
 ====================
@@ -200,7 +236,7 @@ About
 	background: url('../images/point.png');
 	background-size: cover;
 	height: 50rem;
-	width: 80%;
+	width: 85%;
 	margin: 0 auto;
 }
 
@@ -244,7 +280,6 @@ About
 }
 
 .about-text {
-	width: 70%;
 	margin: auto;
 	display: flex;
 	align-items: center;
@@ -376,7 +411,7 @@ Blog
 	border: 1px solid rgba(0,0,0,0.2);
 	position: relative;
 	background-size: cover;
-	transition: all 1s linear;
+	transition: all 0.7s linear;
 }
 
 .blogfilter {
@@ -408,21 +443,23 @@ Prices
 */
 
 #prices {
-	background: url('../images/background.png') center bottom;
+	background: url('../images/background.png') center bottom no-repeat;
+	background-size: cover;
 	text-align: center;
 	color: white;
 }
 
-#prices p {
-	color: white;
+#program-note{
 	font-size: 1.8rem;
-	margin: 2rem auto;
+	color: white;
+	margin: 2rem auto 6rem auto;
 }
 
 .pricing {
 	border: 1px solid white;
 	margin-top: 3rem;
 	padding-bottom: 7rem;
+	transition: all 0.3s linear;
 }
 
 .package {
@@ -435,7 +472,7 @@ Prices
 	width: 12rem;
 	height: 12rem;
 	padding-top: 3.8rem;
-	margin-bottom: 5rem;
+	margin-bottom: 3rem;
 	border-radius: 50%;
 	font-size: 3rem;
 	font-weight: bold;
@@ -445,16 +482,134 @@ Prices
 }
 
 .pricing p {
+	height: 17rem;
 	width: 60%;
 	margin: 0 auto;
 	font-weight: bold;
 	line-height: 3rem;
 	text-align: center;
-	height: 20rem;
+	color: white;
 }
 
 @media only screen and (max-width: 992px) {
 	.pricing p {
-		height: 15rem;
+		height: 12rem;
 	}
+}
+
+.pricing .btn {
+	opacity: 0;
+	transition: all 0.2s linear
+}
+
+.pricing .btn:hover {
+	background: rgba(0,0,0,0.9);
+	color: white;
+}
+
+.pricing:hover {
+	background: white;
+}
+
+.pricing:hover .package,
+.pricing:hover p {
+	color: rgba(0,0,0,0.9);
+}
+
+.pricing:hover .amount {
+	background: rgba(0,0,0,0.9);
+	color: white;
+}
+
+.pricing:hover .btn {
+	opacity: 1;
+}
+
+/*
+======================
+Testimonials
+======================
+*/
+
+#testimonials {
+	color: rgba(0,0,0,0.8);
+	text-align: center;
+}
+
+.quotes {
+	margin: 3rem auto;
+	font-family: 'Lora', sans-serif;
+	font-size: 2rem;
+	line-height: 3.2rem;
+	color: rgba(0,0,0,0.8);
+	transition: all 0.5s linear;
+}
+
+.citation {
+	color: rgba(0,0,0,0.5);
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+
+#testimonials span {
+	background: white;
+	font-size: 0px;
+	padding: 6px;
+	margin: 1rem;
+	border-radius: 50%;
+	border: 1px solid rgba(0,0,0,0.9);
+}
+
+#testimonials span:hover {
+	background: rgba(0,0,0,0.9);
+	transition: all 0.3s linear;
+}
+
+#testimonials span.active-quote {
+	background: rgba(0,0,0,0.9);
+}
+
+/*
+========================
+Contact
+========================
+*/
+
+#contact {
+	background: url('../images/background.png') center bottom no-repeat;
+	text-align: center;
+}
+
+#contact p {
+	color: grey;
+	font-size: 1.8rem;
+}
+
+#green {
+	color: #31a664;
+}
+
+#green:hover {
+	color: rgba(44, 166, 100, 0.7);
+}
+
+#contact i {
+	color: grey;
+}
+
+.follow-me {
+	margin-top: 4rem;
+}
+
+.follow-me a {
+	padding: 1.5rem;
+	border-radius: 50%;
+}
+
+.follow-me a:hover {
+	background: white;
+}
+
+.warning {
+	margin-top: 6rem;
 }
