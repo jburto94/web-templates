@@ -95,7 +95,6 @@ table {
 body {
   color: #7B6C63;
   font: 17px/30px 'Raleway', sans-serif;
-  margin-top: 80px;
 }
 
 h1 {
@@ -153,9 +152,12 @@ header {
   background-color: #3A3A3A;
   overflow: hidden;
   position: fixed;
-  top: 0;
+  top: 0px;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
@@ -177,6 +179,10 @@ nav li {
   text-transform: uppercase;
 }
 
+nav a.active {
+  border-bottom: 2px solid #f5f5f5;
+}
+
 nav a:hover {
   opacity: 0.6;
 }
@@ -190,6 +196,7 @@ nav a:hover {
 .hero {
   background: url('../images/hero.jpg') center center no-repeat;
   padding-right: 150px;
+  padding-top: 200px;
   padding-bottom: 200px;
   color: white;
 }
