@@ -74,6 +74,9 @@ a:hover {
 	text-decoration: none;
 }
 
+img {
+	max-width: 100%;
+}
 
 
 /*
@@ -175,8 +178,7 @@ nav .logo {
 	padding: 1rem;
 }
 
-.logo img {
-	max-width: 100%;
+nav .logo img {
 	height: 69px;
 }
 
