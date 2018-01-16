@@ -281,7 +281,7 @@ About
 	height: 100%;
 	z-index: 10;
 	opacity: 0;
-	display: flex;
+	display: none;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
@@ -290,7 +290,7 @@ About
 
 .about-pic:hover .about-pic-info {
 	transform: scale(0.9);
-	opacity: 1;
+	display: flex;
 }
 
 
@@ -345,7 +345,7 @@ Fitness Facts
 }
 
 #facts img {
-	width: 500px;
+	width: 450px;
 }
 
 .fact-box {
@@ -359,8 +359,8 @@ Fitness Facts
 	box-shadow: 8px 8px 8px rgba(0,0,0,0.2);
 	z-index: 100;
 	position: relative;
-	top: -100px;
-	left: 80px;
+	top: -90px;
+	left: 60px;
 }
 
 #facts ul {
@@ -449,6 +449,23 @@ Blog
 	transition: all 0.7s linear;
 }
 
+@media only screen and (max-width: 992px) {
+	.blog {
+		background: url('../images/profile.png') center top no-repeat;
+	}
+
+	.blogfilter {
+		background: rgba(0,0,0,0.5);
+	}
+
+	.blog h3,
+	.blog h5,
+	.blog h6 {
+		color: white;
+	}
+}
+
+
 .blogfilter {
 	height: 100%;
 	width: 100%;
@@ -530,12 +547,18 @@ Prices
 	.pricing p {
 		height: 12rem;
 	}
+
+	.pricing .btn {
+		opacity: 1;
+	}
 }
 
 .pricing .btn {
 	opacity: 0;
 	transition: all 0.2s linear
 }
+
+
 
 .pricing .btn:hover {
 	background: rgba(0,0,0,0.9);
@@ -640,11 +663,23 @@ Contact
 
 .follow-me {
 	margin-top: 4rem;
+	display: flex;
+	justify-content: center;
 }
 
 .follow-me a {
-	padding: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 6rem;
+	width: 6rem;
 	border-radius: 50%;
+}
+
+@media only screen and (max-width: 922px) {
+	.follow-me a {
+		background: white;
+	}
 }
 
 .follow-me a:hover {
