@@ -174,3 +174,35 @@ function slide(e) {
 }
 
 window.addEventListener('scroll', debounce(slide, 15));
+
+
+//Navigational scroll animation using jQuery and taken from css-tricks.com
+$('a[href*="#"]')
+	.not('[href="#"]')
+	.not('[href="#0"]')
+	.click(function(e) {
+		if (
+			location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+			&&
+			location.hostname == this.hostname
+		) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+			if (target.length) {
+				e.preventDefault();
+				$('html, body').animate({
+					scrollTop: target.offset().top
+				}, 1000, function() {
+					var $target = $(target);
+					$target.focus();
+					if ($target.is(":focus")) {
+						return false;
+					} else {
+						$target.attr('tabindex', '-1');
+						$target.focus();
+					};
+				});
+			}
+		}
+	});
