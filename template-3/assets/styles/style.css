@@ -345,22 +345,22 @@ Fitness Facts
 }
 
 #facts img {
-	width: 450px;
+	width: 85%;
 }
 
 .fact-box {
 	color: rgba(0,0,0,0.9);
-	font-size: 2.4rem;
+	font-size: 2.2rem;
 	font-family: 'Lora', sans-serif;
-	width: 80%;
+	width: 75%;
 	padding: 3rem;
 	border-left: 10px solid rgba(0,0,0,0.8);
 	background: #fff;
 	box-shadow: 8px 8px 8px rgba(0,0,0,0.2);
 	z-index: 100;
 	position: relative;
-	top: -90px;
-	left: 60px;
+	top: -70px;
+	left: 15%;
 }
 
 #facts ul {
@@ -548,7 +548,7 @@ Prices
 		height: 12rem;
 	}
 
-	.pricing .btn {
+	.pricing a.btn {
 		opacity: 1;
 	}
 }
@@ -662,9 +662,9 @@ Contact
 }
 
 .follow-me {
-	margin-top: 4rem;
+	margin: 4rem 1rem;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 }
 
 .follow-me a {
