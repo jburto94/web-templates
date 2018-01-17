@@ -334,6 +334,10 @@ About
 	.about-text p {
 		text-align: left;
 	}
+
+	.about-pic {
+		background-position: center;
+	}
 }
 
 .about-text {
