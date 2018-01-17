@@ -37,11 +37,12 @@ function blogReset(e) {
 }
 
 
-for (var i = 0; i < blogs.length; i++) {
-	blogs[i].addEventListener('mouseover', blogScroll);
-	blogs[i].addEventListener('mouseout', blogReset);
+if (window.screen.width > 700) {
+		for (var i = 0; i < blogs.length; i++) {
+		blogs[i].addEventListener('mouseover', blogScroll);
+		blogs[i].addEventListener('mouseout', blogReset);
+	}
 }
-
 
 
 //Quote Generator
@@ -62,24 +63,10 @@ var text2 = `Greg pushed me to be the best version of myself both
 hysically and mentally. He was SUPER helpful in teaching technique 
 and helping make a workout and meal plan to help me reach my goals. 
 It is definitely in my New Years resolution to work with him again!`;
-var text3 = `Going into the Summer after my Sophomore year of 
-college I was quite out of shape. This was something I wasn’t used 
-to since I played sports all throughout my life and especially in 
-high school. Freshman year I was able to work out a good bit, but 
-the spring of my Sophomore year at Clemson I was slammed with 
-school work and limited on my time. I had to cut a lot of my 
-workout time out of my schedule simply because it was easy to cut 
-because of the amount of time it took up. However, while living at 
-home over the summer all I was responsible for was working a summer 
-job. So, I was anxious to get back in shape. I turned to Greg for 
-help having known he was getting serious into working out and knew 
-lot of stuff I didn’t know. Greg put me on an 8 week workout plan 
+var text3 = `Greg put me on an 8 week workout plan 
 where I saw an enormous amount of improvement. The mixture between 
 lifting weights and doing cardio had me leaner and stronger all 
-around. For example, I went from barely being able to bench 4 sets 
-of 6 at 145 pounds to being able to do 4 sets of 6 at 165 pounds in 
-just 8 weeks while losing weight because of the mixture of cardio 
-in my workout plan throughout the week. Overall, those 8 weeks were 
+around . . . Overall, those 8 weeks were 
 filled with the quickest amount of physical improvement that I’ve 
 seen since having mandatory 2 hour a day lacrosse practice followed 
 by an hour and half swim practice 4-5 times a week. I couldn’t 
